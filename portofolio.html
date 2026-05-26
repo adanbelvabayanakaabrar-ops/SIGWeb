@@ -1,0 +1,241 @@
+    <!doctype html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Profil Adan Belva Bayanaka Abrar</title>
+
+        <style>
+        body {
+            font-family: Arial;
+            background: #e6f2ff;
+            margin: 0;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid black;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #fdcb2c;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 3px solid black;
+        }
+
+        img {
+            border: 3px solid black;
+        }
+
+        .nama {
+            color: #222;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+        <h1>ADAN BELVA BAYANAKA ABRAR</h1>
+        <p>Surveyor | GIS Analyst | Web Developer</p>
+        </header>
+
+        <nav>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#hobi">Hobi</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#hubungi">Hubungi</a>
+        </nav>
+
+        <section id="tentang">
+        <h2>Profil Singkat</h2>
+
+        <img src="images/fotoku.jpg" width="170" height="170" /><br /><br />
+
+        <p>
+            Hallo, Nama saya <b class="nama">Adan Belva Bayanaka Abrar</b>. Saya adalah mahasiswa tingkat empat di jurusan Teknologi Survei dan Pemetaan Dasar. Saya berasal dari Kota Surakarta Provinsi Jawa Tengah. Saya menempuh pendidikan ini
+            karena ketertarikan mendalam terhadap pemetaan, penginderaan jauh, dan teknologi geospasial.
+        </p>
+
+        <p>Saya memiliki ketertarikan pada pemetaan, penginderaan jauh, dan teknologi geospasial. Saya mempelajari pengolahan data spasial menggunakan GIS serta penggunaan GPS dan Total Station untuk pengambilan data lapangan.</p>
+
+        <p id="tanggal"></p>
+        </section>
+
+        <section id="pendidikan">
+        <h2>Riwayat Pendidikan</h2>
+
+        <table>
+            <tr>
+            <th>No</th>
+            <th>Tingkat</th>
+            <th>Nama Sekolah/Universitas</th>
+            <th>Tahun</th>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>SMA</td>
+            <td>SMA Negeri 1 Surakarta</td>
+            <td>2021-2024</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>Diploma 4</td>
+            <td>Universitas Gadjah Mada</td>
+            <td>2024 - Sekarang</td>
+            </tr>
+        </table>
+        </section>
+
+        <section id="pengalaman">
+        <h2>Pengalaman</h2>
+
+        <table>
+            <tr>
+            <th>No</th>
+            <th>Nama Instansi</th>
+            <th>Keterangan</th>
+            <th>Periode</th>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>KMTSP SV UGM</td>
+            <td>Staff Divisi Humas</td>
+            <td>Maret 2025 - Desember 2025</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>KMTSP SV UGM</td>
+            <td>Kepala Divisi Kemitraan</td>
+            <td>Desember 2025 - Sekarang</td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td>ATR/BPN Kota Surakarta</td>
+            <td>Magang Mandiri</td>
+            <td>Januari 2025 - Februari 2025</td>
+            </tr>
+        </table>
+        </section>
+
+        <section id="hobi">
+        <h2>Hobi Saya</h2>
+        <ul>
+            <li>Bermain Futsal</li>
+            <li>Menjelajah Alam</li>
+            <li>Membuat Peta</li>
+        </ul>
+
+        <h2>Keahlian</h2>
+        <ol>
+            <li>Pengolahan Data Spasial</li>
+            <li>Autocad Civil 3D</li>
+            <li>ArcGIS / QGIS</li>
+        </ol>
+        </section>
+
+        <section id="kontak">
+        <h2>Kontak</h2>
+        <p>Email: adanbelvabayanakaabrar@mail.ugm.ac.id</p>
+        <p>HP: 085747313954</p>
+        <p>Instagram: @adanblv</p>
+        </section>
+
+        <section id="hubungi">
+        <h2>Hubungi Saya</h2>
+
+        <form onsubmit="kirimPesan(event)">
+            Nama <br />
+            <input type="text" id="nama" required /><br /><br />
+
+            Email <br />
+            <input type="email" id="email" required /><br /><br />
+
+            Pesan <br />
+            <textarea id="pesan" rows="4" cols="30" onkeyup="hitungKarakter()"></textarea><br />
+            Jumlah karakter: <span id="jumlah">0</span><br /><br />
+
+            <input type="submit" value="Kirim" />
+            <input type="reset" />
+        </form>
+
+        <p id="hasil"></p>
+        </section>
+
+        <footer>
+        <p>
+            © 2026 Adan Belva Bayanaka Abrar <br />
+            Praktikum SIG Berbasis Web
+        </p>
+        </footer>
+
+        <script>
+        alert("Selamat datang di Website CV Adan Belva Bayanaka Abrar");
+
+        let today = new Date();
+        let tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+
+        document.getElementById("tanggal").innerHTML = "Tanggal hari ini: " + tanggal;
+
+        function hitungKarakter() {
+            let teks = document.getElementById("pesan").value;
+            document.getElementById("jumlah").innerHTML = teks.length;
+        }
+
+        function kirimPesan(event) {
+            event.preventDefault();
+
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let pesan = document.getElementById("pesan").value;
+
+            document.getElementById("hasil").innerHTML = "<b>Pesan dari:</b> " + nama + "<br>Email: " + email + "<br>Pesan: " + pesan;
+        }
+        </script>
+    </body>
+    </html>
